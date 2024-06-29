@@ -99,9 +99,7 @@ header .dark-nav{
 #drop-down-menu {
   display: none !important;
 }
-.show{
-  display:block !important;
-}
+
 
 /* Hero/Banner section */
 .hero-container {
@@ -514,37 +512,41 @@ font-size: 18px;
   padding:10px;
 } */
 }
+
 @media(max-width:991px) {
   .nav-container .links,
-  .nav-container .action-btn{
+  .nav-container .action-btn {
     display: none;
   }
-  .display-none{
+  
+  .display-none {
     display: block !important;
   }
 
-  #drop-down-menu a{
+  #drop-down-menu a {
     color: var(--color) !important;
     padding-top: 10px;
   }
-  #drop-down-menu ul{
+  
+  #drop-down-menu ul {
     display: grid;
     gap: 3rem;
     padding: 15px 15px;
   }
+  
   #drop-down-menu {
-    display: block !important;
-     width:70%;
-     height: 100vh;
-     background-color: rgba(255, 255, 255, 0.1);
-     backdrop-filter: blur(15px);
-     display:none !important;
-   }
-  
-
-
-  
+    display: none; /* Default is hidden */
+    width: 70%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+  }
 }
+
+.show {
+  display: block !important;
+}
+
 @media(max-width:992px) and (min-width:769px){
     .navbar {
         width: 100%;
