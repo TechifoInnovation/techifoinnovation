@@ -1,11 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>React App</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script defer src='main.js'></script>
 </head>
 <body>
-  <div id="root"></div>
+    <header>
+        <div class="navbar">
+            <div class="nav-container">
+                <h3 class="logo">Techifo</h3>
+                <ul class="links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <button class="action-btn">Get started</button>
+                <i class="toggle_btn display-none fa-solid fa-bars" id="btn"><button>click</button></i>
+            </div>
+            <div id="drop-down-menu">
+                <ul>
+                    <li><a href="http://www.google.com">Home</a></li>
+                    <li><a href="http://www.google.com">About Us</a></li>
+                    <li><a href="http://www.google.com">Service</a></li>
+                    <li><a href="http://www.google.com">Contact Us</a></li>
+                    <a href="#"><button class="action-btn">Get started</button></a>
+                </ul>
+               
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+    
+    
+    <div class="hero-container" id="home"> 
+        <video autoPlay loop muted> 
+          <source src="video/background-img.mp4" type="video/mp4" />
+        </video>
+     <div class='hero-content'>
+     <h1 class="hero">
+          Innovate. Create. Elevate.
+        </h1>
+        <p>At Techifo Innovation, we empower businesses to reach new heights through cutting-edge <br /> technology solutions. Our team of experts is dedicated to delivering innovative and creative solutions  <br />that elevate your brand and drive success.</p>
+        <div class="hero-btn"> 
+         <a href="https://www.google.com"> <button className="btn1">Transform Your Brand</button></a> 
+        </div>
+     </div>
+      </div> 
+
+
+
+      <div class="client-container" id="about">
+        
+        <div class="brands-logo">
+        <p>
+ Brands we have <br /> worked with
+            </p>
+            <div class="brand-logo">
+  <div class="marquee">
+    <div class="marquee-content">
+    <p class="c1">firstbank</p>
+    <p class="c2">Dohina</p>
+    <p class="c3">Facebook</p>
+    <p class="c4">Meta</p>
+    <p class="c5">Fintect</p>
+    <p class="c6">Whatsapp</p>
+    </div>
+  </div>
+</div>
+        </div>
+    </div>
+      
+
+      <div class="about-container" id="about">
+        <div class="why-choose-us">
+         <h1>Why Choose Us</h1>
+       <div class="lists-why-choose-us">
+       <p class="why">Discover why leading brands trust Techifo Innovation to drive their <br /> online growth.Our unique strengths include:</p>
+        <p><b>Cutting-edge technology:</b> Leveraging the latest innovations to stay ahead.</p>
+        <p><b>Expertise:</b> Our team of experts has a deep understanding of innovation and technology</p>
+        <p><b>Proven track record:</b> A history of successfully helping brands grow their online presence.</p>
+        <p><b>Innovative thinking:</b> Bringing creative solutions to drive growth and success.</p>
+        <p><b>Customized solutions:</b> Tailoring our services to meet the unique needs of each brand.</p>
+       </div>
+      
+         <a href="https://wa.me/2348146019007"><button class="btn">Hire Us</button></a>
+        </div>
+        <div class="about-right">
+       <img src="https://i.pinimg.com/564x/af/4a/35/af4a354133730206c434eb3f8e687252.jpg" alt="" />
+        </div>
+      </div>
+
+
+
+      <div>
+        <div class="services-container" id="services">
+          <div class="service-text">
+              <h1 class="h2">Explore Our <span>Service</span></h1>
+              <button class='service-btn'>See More</button>
+          </div>
+  
+          <div class="service-card">
+              <div class="card1">
+                 <div class="card-content">
+                 <div class="icon">
+                      <h1>Icon</h1>
+                      <h2>Web Development</h2>
+                  </div>
+                  <div class="card-text">
+                      <p> We ensure that your online presence is delivered to the right audience at the right time, minimizing downtime and optimizing digital performance</p>
+                  </div>
+                 </div>
+              </div>
+              <div class="card2">
+              <div class="card-content">
+                 <div class="icon">
+                      <h1>Icon</h1>
+                      <h2>Branding/Graphics</h2>
+                  </div>
+                  <div class="card-text">
+                      <p> We ensure that your visual identity is delivered with precision and impact, minimizing confusion and optimizing recognition.</p>
+                  </div>
+                 </div>
+              </div>
+              <div class="card3">
+              <div class="card-content">
+                 <div class="icon">
+                      <h1>Icon</h1>
+                      <h2>Mobile App Dev</h2>
+                  </div>
+                  <div class="card-text">
+                      <p> We ensure that your app is delivered to the right users at the right time, minimizing delays and optimizing performance</p>
+                  </div>
+                 </div>
+              </div>
+          </div>
+        </div>
+      </div>
 </body>
 </html>
