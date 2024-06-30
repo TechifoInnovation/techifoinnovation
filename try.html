@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<style>
+    /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    transition: 1s;
+}
+
+a {
+    color: var(--color3);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Archivo", sans-serif;
+}
+
+:root {
+    --color: rgb(255, 255, 255);
+    --bg: black;
+    --color1: rgb(5, 130, 247);
+    --color2: rgb(31, 143, 247);
+    --color3: rgb(2, 82, 157);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Navbar section */
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: transparent;
+    position: fixed;
+    padding: 0px 120px;
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+header .dark-nav {
+    background-color: var(--color1);
+    transition: 0.5s;
+}
+
+.nav-container {
+    width: 100%;
+    height: 40px;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.nav-container .logo {
+    font-size: 1.6rem;
+    color: var(--color);
+}
+
+.nav-container .links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-container .links a {
+    color: var(--color);
+    font-weight: bolder;
+}
+
+.nav-container .toggle_btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action-btn {
+    padding: 1rem 1.5rem;
+    background-color: var(--color1);
+    font-weight: bolder;
+    color: var(--color);
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Drop down menu */
+#drop-down-menu {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
+@media (max-width: 991px) {
+    .nav-container .links,
+    .nav-container .action-btn {
+        display: none;
+    }
+    .toggle_btn {
+        display: block !important;
+    }
+
+    #drop-down-menu {
+        display: none !important;
+        width: 70%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    #drop-down-menu ul {
+        display: grid;
+        gap: 3rem;
+        padding: 15px 15px;
+    }
+
+    #drop-down-menu a {
+        color: var(--color) !important;
+        padding-top: 10px;
+    }
+    body{
+        background-color: aquamarine;
+    }
+}
+
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-container">
+                <h3 class="logo">Techifo</h3>
+                <ul class="links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+                <button class="action-btn">Get started</button>
+                <i class="toggle_btn fa-solid fa-bars" id="btn">efe</i>
+            </div>
+            <div id="drop-down-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <a href="#"><button class="action-btn">Get started</button></a>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <script src="script.js">
+        document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById("btn");
+    const dropDown = document.getElementById("drop-down-menu");
+
+    btn.addEventListener('click', () => {
+        dropDown.classList.toggle("show");
+    });
+});
+
+    </script>
+</body>
+</html>

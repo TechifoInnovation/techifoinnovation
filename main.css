@@ -99,7 +99,9 @@ header .dark-nav{
 #drop-down-menu {
   display: none !important;
 }
-
+.show{
+  display:block !important;
+}
 
 /* Hero/Banner section */
 .hero-container {
@@ -338,11 +340,17 @@ header .dark-nav{
     }
   .hero-content {
     position: relative;
-    padding: 0px 0px 30px 30px;
+    padding: 0px 0px 20px 20px;
     color: var(--color);
-    padding-top: 20vh;
+    padding-top: 30vh;
     display: grid;
     gap: 0.5rem;
+    }
+    h1{
+      font-size: 35px !important;
+    }
+    .why-choose-us h1{
+      font-size: 25px !important;
     }
     .client-container{
       display: flex;
@@ -360,14 +368,20 @@ header .dark-nav{
     .about-container{
       flex-wrap: wrap;
       padding: 30px 30px;
+      display: grid;
+      gap: 20px;
     }
     .service-text{
       display: flex;
+      align-items: center;
       justify-content: space-between;
-      padding: 70px 30px;
+      padding: 70px 20px;
+    }
+    .h2{
+      font-size: 25px !important;
     }
     .service-text h2{
-    font-size: 18px;
+    font-size: 18px; 
     }
     .service-card{
       gap: 20px !important;
@@ -512,41 +526,37 @@ font-size: 18px;
   padding:10px;
 } */
 }
-
 @media(max-width:991px) {
   .nav-container .links,
-  .nav-container .action-btn {
+  .nav-container .action-btn{
     display: none;
   }
-  
-  .display-none {
+  .display-none{
     display: block !important;
   }
 
-  #drop-down-menu a {
+  #drop-down-menu a{
     color: var(--color) !important;
     padding-top: 10px;
   }
-  
-  #drop-down-menu ul {
+  #drop-down-menu ul{
     display: grid;
     gap: 3rem;
     padding: 15px 15px;
   }
-  
   #drop-down-menu {
-    display: none; /* Default is hidden */
-    width: 70%;
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(15px);
-  }
-}
+    display: block !important;
+     width:70%;
+     height: 100vh;
+     background-color: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(15px);
+     display:none !important;
+   }
+  
 
-.show {
-  display: block !important;
-}
 
+  
+}
 @media(max-width:992px) and (min-width:769px){
     .navbar {
         width: 100%;
@@ -664,3 +674,4 @@ font-size: 18px;
 }
   
 }
+
